@@ -4,8 +4,8 @@
     "os": "Tumbleweed",
     "arch": "x86_64",
 
-    "iso_url": "http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20170927-Media.iso",
-    "iso_checksum": "2c9041138c23f83a985aa39016e600a804690acdf9fa8fc8d30cb106639b0833",
+    "iso_url": "http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20180110-Media.iso",
+    "iso_checksum": "ff7dc7f842e7d7dbc8ffe486805a835724b9b043ceea5f8df1a5319b4a3945f2",
     "iso_checksum_type": "sha256",
 
     "qemu_accelerator": "kvm",
@@ -158,10 +158,15 @@
         "scripts/base/bindfs.sh",
         "scripts/tumbleweed/puppet.sh",
         "scripts/tumbleweed/chef.sh",
+        "scripts/42.3/salt.sh",
         "scripts/base/vagrant.sh",
         "scripts/base/cleanup.sh",
         "scripts/base/zerodisk.sh"
       ]
+    },
+    {
+      "type": "salt-masterless",
+      "local_state_tree": "salt"
     }
   ]
 }

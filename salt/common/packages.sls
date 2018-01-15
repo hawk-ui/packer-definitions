@@ -12,6 +12,13 @@ network:ha-clustering:BuildDep:
     - refresh: True
     - gpgautoimport: True
 
+devel:languages:ruby:extensions:
+  pkgrepo.managed:
+    - humanname: devel:languages:ruby:extensions
+    - baseurl: http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_Leap_42.3/
+    - refresh: True
+    - gpgautoimport: True
+
 common_packages:
   pkg.installed:
     - names:
@@ -45,4 +52,5 @@ common_packages:
     - require:
         - pkgrepo: network:ha-clustering:Factory
         - pkgrepo: network:ha-clustering:BuildDep
+        - pkgrepo: devel:languages:ruby:extensions
 
