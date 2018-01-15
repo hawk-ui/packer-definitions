@@ -161,6 +161,11 @@
         "scripts/base/cleanup.sh",
         "scripts/base/zerodisk.sh"
       ]
+    },
+    {
+      "type": "salt-masterless",
+      "minion_config": "salt/etc/minion",
+      "local_state_tree": "salt/salt"
     }
   ]
 }
