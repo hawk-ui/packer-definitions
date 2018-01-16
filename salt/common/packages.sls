@@ -1,21 +1,21 @@
 network:ha-clustering:Factory:
   pkgrepo.managed:
     - humanname: network:ha-clustering:Factory
-    - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/Factory/openSUSE_Leap_42.3/
+    - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/Factory/openSUSE_Tumbleweed/
     - refresh: True
     - gpgautoimport: True
 
 network:ha-clustering:BuildDep:
   pkgrepo.managed:
     - humanname: network:ha-clustering:BuildDep
-    - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/BuildDep/openSUSE_Leap_42.3/
+    - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/BuildDep/openSUSE_Tumbleweed/
     - refresh: True
     - gpgautoimport: True
 
 devel:languages:ruby:extensions:
   pkgrepo.managed:
     - humanname: devel:languages:ruby:extensions
-    - baseurl: http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_Leap_42.3/
+    - baseurl: http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_Tumbleweed/
     - refresh: True
     - gpgautoimport: True
 

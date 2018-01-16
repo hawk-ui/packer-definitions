@@ -1,2 +1,2 @@
-salt://utils/modify_shebangs.sh:
-  cmd.script: []
+# salt://utils/modify_shebangs.sh:
+#  cmd.script: []
