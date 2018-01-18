@@ -164,7 +164,8 @@
     },
     {
       "type": "salt-masterless",
-      "local_state_tree": "salt"
+      "local_state_tree": "salt",
+      "skip_bootstrap": true
     }
   ]
 }
