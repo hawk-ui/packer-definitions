@@ -6,6 +6,6 @@ zypper addrepo -n 'Systemsmanagement Salt' http://download.opensuse.org/reposito
 
 zypper --non-interactive --gpg-auto-import-keys in \
   --auto-agree-with-licenses \
-  python salt salt-minion salt-master
+  salt-minion
 
 exit 0
