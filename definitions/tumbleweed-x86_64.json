@@ -76,6 +76,7 @@
       "ssh_wait_timeout": "60m",
       "disk_size": 40960,
       "ssh_port": 22,
+      "ssh_pty" : "true",
       "headless": false,
       "http_directory": "http",
       "shutdown_command": "echo 'vagrant' | sudo -S /sbin/halt -p",
@@ -156,17 +157,16 @@
         "scripts/base/vmtools.sh",
         "scripts/base/sshd.sh",
         "scripts/base/bindfs.sh",
-        "scripts/tumbleweed/puppet.sh",
-        "scripts/tumbleweed/chef.sh",
-        "scripts/42.3/salt.sh",
+        "scripts/tumbleweed/salt.sh",
         "scripts/base/vagrant.sh",
         "scripts/base/cleanup.sh",
         "scripts/base/zerodisk.sh"
       ]
     },
-    {
+    { 
       "type": "salt-masterless",
-      "local_state_tree": "salt"
+      "local_state_tree": "salt",
+      "skip_bootstrap": true
     }
   ]
 }
