@@ -1,23 +1,27 @@
+{% set distro_repo = 'openSUSE_Tumbleweed' if grains['oscodename'] == 'openSUSE Tumbleweed' else 'openSUSE_Leap_42.3' %}
+
 network:ha-clustering:Factory:
   pkgrepo.managed:
     - humanname: network:ha-clustering:Factory
-    - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/Factory/openSUSE_Tumbleweed/
+    - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/Factory/{{distro_repo}}/
     - refresh: True
     - gpgautoimport: True
 
 network:ha-clustering:BuildDep:
   pkgrepo.managed:
     - humanname: network:ha-clustering:BuildDep
-    - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/BuildDep/openSUSE_Tumbleweed/
+    - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/BuildDep/{{distro_repo}}/
     - refresh: True
     - gpgautoimport: True
 
 devel:languages:ruby:extensions:
   pkgrepo.managed:
     - humanname: devel:languages:ruby:extensions
-    - baseurl: http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_Tumbleweed/
+    - baseurl: http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/{{distro_repo}}/
     - refresh: True
     - gpgautoimport: True
+
+
 
 common_packages:
   pkg.installed:
