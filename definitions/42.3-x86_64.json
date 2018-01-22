@@ -165,7 +165,8 @@
     {
       "type": "salt-masterless",
       "local_state_tree": "salt",
-      "skip_bootstrap": true
+      "skip_bootstrap": true,
+      "no_exit_on_failure": true
     }
   ]
 }
