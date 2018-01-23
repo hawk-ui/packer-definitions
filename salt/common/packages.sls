@@ -14,6 +14,15 @@ network:ha-clustering:BuildDep:
     - refresh: True
     - gpgautoimport: True
 
+home:darix:apps:
+  pkgrepo.managed:
+    - humanname: home:darix:apps
+    - baseurl: http://download.opensuse.org/repositories/home:/darix:/apps/{{distro_repo}}/
+    - refresh: True
+    - gpgautoimport: True
+
+
+
 common_packages:
   pkg.installed:
     - names:
@@ -28,26 +37,23 @@ common_packages:
         - drbd
         - drbd-utils
         - nodejs6
+        - ruby2.4-rubygem-rails-5_1
+        - ruby2.4-rubygem-puma
+        - ruby2.4-rubygem-sass-rails
+        - ruby2.4-rubygem-virtus
+        - ruby2.4-rubygem-js-routes
+        - ruby2.4-rubygem-fast_gettext
+        - ruby2.4-rubygem-gettext_i18n_rails
+        - ruby2.4-rubygem-gettext_i18n_rails_js
+        - ruby2.4-rubygem-sprockets
+        - ruby2.4-rubygem-kramdown
+        - ruby2.4-rubygem-web-console
+        - ruby2.4-rubygem-spring
+        - ruby2.4-rubygem-uglifier
+        - ruby2.4-rubygem-gettext
         - make
         - gcc
     - require:
         - pkgrepo: network:ha-clustering:Factory
-
-rubygmes_packages:
-  pkg.installed:
-    - fromrepo: network:ha-clustering:BuildDep
-    - pkgs:
-      - ruby2.4-rubygem-rails-5_1
-      - ruby2.4-rubygem-puma
-      - ruby2.4-rubygem-sass-rails
-      - ruby2.4-rubygem-virtus
-      - ruby2.4-rubygem-js-routes
-      - ruby2.4-rubygem-fast_gettext
-      - ruby2.4-rubygem-gettext_i18n_rails
-      - ruby2.4-rubygem-gettext_i18n_rails_js
-      - ruby2.4-rubygem-sprockets
-      - ruby2.4-rubygem-kramdown
-      - ruby2.4-rubygem-web-console
-      - ruby2.4-rubygem-spring
-      - ruby2.4-rubygem-uglifier
-      - ruby2.4-rubygem-gettext
+        - pkgrepo: network:ha-clustering:BuildDep
+        - pkgrepo: home:darix:apps
