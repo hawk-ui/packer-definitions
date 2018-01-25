@@ -14,14 +14,28 @@ network:ha-clustering:BuildDep:
     - refresh: True
     - gpgautoimport: True
 
+{% if distro_repo == 'openSUSE_Tumbleweed' %}
+update-oss:
+  pkgrepo.managed:
+    - humanname: update-oss
+    - baseurl: http://download.opensuse.org/repositories/openSUSE:/Factory:/Update/standard/
+    - refresh: True
+    - gpgautoimport: True
+{% elif distro_repo == 'openSUSE_Leap_42.3' %}
+update-oss:
+  pkgrepo.managed:
+    - humanname: update-oss
+    - baseurl: http://download.opensuse.org/update/leap/42.3/oss/
+    - refresh: True
+    - gpgautoimport: True
+
 home:darix:apps:
   pkgrepo.managed:
     - humanname: home:darix:apps
     - baseurl: http://download.opensuse.org/repositories/home:/darix:/apps/{{distro_repo}}/
     - refresh: True
     - gpgautoimport: True
-
-
+{% endif %}
 
 common_packages:
   pkg.installed:
@@ -56,4 +70,4 @@ common_packages:
     - require:
         - pkgrepo: network:ha-clustering:Factory
         - pkgrepo: network:ha-clustering:BuildDep
-        - pkgrepo: home:darix:apps
+        - pkgrepo: update-oss
