@@ -1,0 +1,8 @@
+environment: image-build
+
+file_roots:
+  image-build:
+    - /srv/salt/image-build
+pillar_roots:
+  image-build:
+    - /srv/pillar/image-build
