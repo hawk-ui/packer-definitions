@@ -14,32 +14,45 @@ network:ha-clustering:BuildDep:
     - refresh: True
     - gpgautoimport: True
 
+devel:languages:ruby:extensions:
+  pkgrepo.managed:
+    - humanname: devel:languages:ruby:extensions
+    - baseurl: http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/{{distro_repo}}/
+    - refresh: True
+    - gpgautoimport: True
+
+devel:languages:ruby:
+  pkgrepo.managed:
+    - humanname: devel:languages:ruby
+    - baseurl: https://download.opensuse.org/repositories/devel:/languages:/ruby/{{distro_repo}}/
+    - refresh: True
+    - gpgautoimport: True
+
+
 {% if distro_repo == 'openSUSE_Tumbleweed' %}
+
 update-oss:
   pkgrepo.managed:
     - humanname: update-oss
     - baseurl: http://download.opensuse.org/repositories/openSUSE:/Factory:/Update/standard/
     - refresh: True
     - gpgautoimport: True
+
 {% elif distro_repo == 'openSUSE_Leap_42.3' %}
+
 update-oss:
   pkgrepo.managed:
     - humanname: update-oss
     - baseurl: http://download.opensuse.org/update/leap/42.3/oss/
     - refresh: True
     - gpgautoimport: True
-
-home:darix:apps:
-  pkgrepo.managed:
-    - humanname: home:darix:apps
-    - baseurl: http://download.opensuse.org/repositories/home:/darix:/apps/{{distro_repo}}/
-    - refresh: True
-    - gpgautoimport: True
+  
 {% endif %}
 
 common_packages:
   pkg.installed:
     - names:
+        - nfs-client
         - ha-cluster-bootstrap
         - fence-agents
         - apache2
@@ -66,7 +79,7 @@ common_packages:
         - ruby2.4-rubygem-uglifier
         - ruby2.4-rubygem-gettext
         - make
-        - gcc
+        - gcc       
     - require:
         - pkgrepo: network:ha-clustering:Factory
         - pkgrepo: network:ha-clustering:BuildDep
