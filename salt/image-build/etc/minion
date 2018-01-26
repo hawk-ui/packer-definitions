@@ -1,4 +1,5 @@
 environment: image-build
+minion_id_caching: False
 
 file_roots:
   image-build:

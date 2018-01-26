@@ -1,6 +1,6 @@
 {
   "variables": {
-    "version": "1.1.0",
+    "version": "1.1.1",
     "os": "Tumbleweed",
     "arch": "x86_64",
 
@@ -168,7 +168,6 @@
       "local_state_tree": "salt",
       "skip_bootstrap": true,
       "no_exit_on_failure": true,
-      "salt_call_args": "saltenv=image-build",
       "minion_config": "salt/image-build/etc/minion"
         }
   ]
