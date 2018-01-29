@@ -54,10 +54,14 @@ common_packages:
     - names:
         - nfs-client
         - ha-cluster-bootstrap
+        - hawk2
+        - hawk-apiserver
+        - ocfs2-tools
+        - sbd
+        - resource-agents
         - fence-agents
         - apache2
         - haproxy
-        - hawk-apiserver
         - libglue-devel
         - libdlm
         - drbd-kmp-default
