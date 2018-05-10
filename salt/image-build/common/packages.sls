@@ -46,13 +46,16 @@ update-oss:
     - baseurl: http://download.opensuse.org/update/leap/42.3/oss/
     - refresh: True
     - gpgautoimport: True
-  
+
 {% endif %}
 
 common_packages:
   pkg.installed:
+    - version: 'latest'
+    - refresh: True
     - names:
         - nfs-client
+        - nfs-kernel-server
         - ha-cluster-bootstrap
         - hawk2
         - hawk-apiserver
@@ -67,23 +70,26 @@ common_packages:
         - drbd-kmp-default
         - drbd
         - drbd-utils
+        - ruby-devel
+        - zlib-devel
+        - libxslt-devel
         - nodejs6
-        - ruby2.4-rubygem-rails-5_1
-        - ruby2.4-rubygem-puma
-        - ruby2.4-rubygem-sass-rails
-        - ruby2.4-rubygem-virtus
-        - ruby2.4-rubygem-js-routes
-        - ruby2.4-rubygem-fast_gettext
-        - ruby2.4-rubygem-gettext_i18n_rails
-        - ruby2.4-rubygem-gettext_i18n_rails_js
-        - ruby2.4-rubygem-sprockets
-        - ruby2.4-rubygem-kramdown
-        - ruby2.4-rubygem-web-console
-        - ruby2.4-rubygem-spring
-        - ruby2.4-rubygem-uglifier
-        - ruby2.4-rubygem-gettext
+        - ruby2.5-rubygem-rails-5_1
+        - ruby2.5-rubygem-puma
+        - ruby2.5-rubygem-sass-rails
+        - ruby2.5-rubygem-virtus
+        - ruby2.5-rubygem-js-routes
+        - ruby2.5-rubygem-fast_gettext
+        - ruby2.5-rubygem-gettext_i18n_rails
+        - ruby2.5-rubygem-gettext_i18n_rails_js
+        - ruby2.5-rubygem-sprockets
+        - ruby2.5-rubygem-kramdown
+        - ruby2.5-rubygem-web-console
+        - ruby2.5-rubygem-spring
+        - ruby2.5-rubygem-uglifier
+        - ruby2.5-rubygem-gettext
         - make
-        - gcc       
+        - gcc
     - require:
         - pkgrepo: network:ha-clustering:Factory
         - pkgrepo: network:ha-clustering:BuildDep
