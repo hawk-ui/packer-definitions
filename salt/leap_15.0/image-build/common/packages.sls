@@ -1,4 +1,4 @@
-{% set distro_repo = 'openSUSE_Tumbleweed' if grains['oscodename'] == 'openSUSE Tumbleweed' else 'openSUSE_Leap_42.3' %}
+{% set distro_repo = 'openSUSE_Leap_15.0' %}
 
 network:ha-clustering:Factory:
   pkgrepo.managed:
@@ -29,25 +29,12 @@ devel:languages:ruby:
     - gpgautoimport: True
 
 
-{% if distro_repo == 'openSUSE_Tumbleweed' %}
-
 update-oss:
   pkgrepo.managed:
     - humanname: update-oss
-    - baseurl: http://download.opensuse.org/repositories/openSUSE:/Factory:/Update/standard/
+    - baseurl: http://download.opensuse.org/update/leap/15.0/oss/
     - refresh: True
     - gpgautoimport: True
-
-{% elif distro_repo == 'openSUSE_Leap_42.3' %}
-
-update-oss:
-  pkgrepo.managed:
-    - humanname: update-oss
-    - baseurl: http://download.opensuse.org/update/leap/42.3/oss/
-    - refresh: True
-    - gpgautoimport: True
-
-{% endif %}
 
 common_packages:
   pkg.installed:
