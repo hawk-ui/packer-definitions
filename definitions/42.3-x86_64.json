@@ -164,7 +164,7 @@
     },
     {
       "type": "salt-masterless",
-      "local_state_tree": "salt",
+      "local_state_tree": "salt/leap_42.3",
       "skip_bootstrap": true,
       "no_exit_on_failure": true
     }

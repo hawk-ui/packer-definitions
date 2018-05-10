@@ -165,10 +165,10 @@
     },
     {
       "type": "salt-masterless",
-      "local_state_tree": "salt",
+      "local_state_tree": "salt/tumbleweed",
       "skip_bootstrap": true,
       "no_exit_on_failure": true,
-      "minion_config": "salt/image-build/etc/minion"
+      "minion_config": "salt/tumbleweed/image-build/etc/minion"
         }
   ]
 }
