@@ -37,7 +37,6 @@ update-oss:
 
 common_packages:
   pkg.installed:
-    - version: 'latest'
     - refresh: True
     - names:
         - nfs-client
@@ -59,21 +58,28 @@ common_packages:
         - ruby-devel
         - zlib-devel
         - libxslt-devel
-        - nodejs6
-        - ruby2.5-rubygem-rails-5_1
-        - ruby2.5-rubygem-puma
-        - ruby2.5-rubygem-sass-rails
-        - ruby2.5-rubygem-virtus
-        - ruby2.5-rubygem-js-routes
-        - ruby2.5-rubygem-fast_gettext
-        - ruby2.5-rubygem-gettext_i18n_rails
-        - ruby2.5-rubygem-gettext_i18n_rails_js
-        - ruby2.5-rubygem-sprockets
-        - ruby2.5-rubygem-kramdown
-        - ruby2.5-rubygem-web-console
-        - ruby2.5-rubygem-spring
-        - ruby2.5-rubygem-uglifier
-        - ruby2.5-rubygem-gettext
+        - nodejs4
+        - ruby2.1
+        - ruby2.1-devel
+        - ruby2.1-rubygem-rubygems-update
+        - ruby2.1-rubygem-bundler
+        - ruby2.1-rubygem-rails-4_2
+        - ruby2.1-rubygem-puma
+        - ruby2.1-rubygem-sass-rails
+        - ruby2.1-rubygem-sass
+        - ruby2.1-rubygem-virtus
+        - ruby2.1-rubygem-js-routes
+        - ruby2.1-rubygem-fast_gettext
+        - ruby2.1-rubygem-gettext_i18n_rails
+        - ruby2.1-rubygem-gettext_i18n_rails_js
+        - ruby2.1-rubygem-sprockets
+        - ruby2.1-rubygem-kramdown
+        - ruby2.1-rubygem-web-console
+        - ruby2.1-rubygem-spring
+        - ruby2.1-rubygem-uglifier
+        - ruby2.1-rubygem-gettext
+        - ruby2.1-rubygem-sexp_processor
+        - ruby2.1-rubygem-tilt-1_4
         - make
         - gcc
     - require:
