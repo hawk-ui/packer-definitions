@@ -1,12 +1,5 @@
 {% set distro_repo = 'openSUSE_Leap_42.3' %}
 
-network:ha-clustering:Factory:
-  pkgrepo.managed:
-    - humanname: network:ha-clustering:Factory
-    - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/Factory/{{distro_repo}}/
-    - refresh: True
-    - gpgautoimport: True
-
 network:ha-clustering:BuildDep:
   pkgrepo.managed:
     - humanname: network:ha-clustering:BuildDep
@@ -43,7 +36,6 @@ common_packages:
         - nfs-kernel-server
         - ha-cluster-bootstrap
         - hawk2
-        - hawk-apiserver
         - ocfs2-tools
         - sbd
         - resource-agents
@@ -83,6 +75,5 @@ common_packages:
         - make
         - gcc
     - require:
-        - pkgrepo: network:ha-clustering:Factory
         - pkgrepo: network:ha-clustering:BuildDep
         - pkgrepo: update-oss
