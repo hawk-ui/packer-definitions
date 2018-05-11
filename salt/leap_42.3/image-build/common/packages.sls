@@ -47,7 +47,6 @@ common_packages:
         - drbd-kmp-default
         - drbd
         - drbd-utils
-        - ruby-devel
         - zlib-devel
         - libxslt-devel
         - nodejs4
