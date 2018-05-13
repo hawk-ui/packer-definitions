@@ -21,13 +21,6 @@ devel:languages:ruby:
     - refresh: True
     - gpgautoimport: True
 
-update-oss:
-  pkgrepo.managed:
-    - humanname: update-oss
-    - baseurl: http://download.opensuse.org/update/leap/42.3/oss/
-    - refresh: True
-    - gpgautoimport: True
-
 common_packages:
   pkg.installed:
     - refresh: True
@@ -42,6 +35,10 @@ common_packages:
         - fence-agents
         - apache2
         - haproxy
+        - glib2-devel
+        - libxml2-devel
+        - pam-devel
+        - libpacemaker-devel
         - libglue-devel
         - libdlm
         - drbd-kmp-default
@@ -75,4 +72,5 @@ common_packages:
         - gcc
     - require:
         - pkgrepo: network:ha-clustering:BuildDep
-        - pkgrepo: update-oss
+        - pkgrepo: devel:languages:ruby:extensions
+        - pkgrepo: devel:languages:ruby

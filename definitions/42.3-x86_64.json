@@ -1,6 +1,6 @@
 {
   "variables": {
-    "version": "1.0.6",
+    "version": "1.0.8",
     "os": "42.3",
     "arch": "x86_64",
 
@@ -164,9 +164,10 @@
     },
     {
       "type": "salt-masterless",
-      "local_state_tree": "salt/leap_42.3",
+      "local_state_tree": "provisioning_scripts/leap_42.3/salt",
       "skip_bootstrap": true,
-      "no_exit_on_failure": true
+      "no_exit_on_failure": true,
+      "minion_config": "provisioning_scripts/leap_42.3/salt/image-build/etc/minion"
     }
   ]
 }
