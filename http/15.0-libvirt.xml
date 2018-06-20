@@ -28,8 +28,8 @@
   </bootloader>
 
   <firewall>
-    <enable_firewall config:type="boolean">false</enable_firewall>
-    <start_firewall config:type="boolean">false</start_firewall>
+    <enable_firewall>false</enable_firewall>
+    <start_firewall>false</start_firewall>
   </firewall>
 
   <keyboard>
@@ -102,7 +102,6 @@
   </report>
 
   <software>
-    <do_online_update config:type="boolean">false</do_online_update>
     <install_recommended config:type="boolean">false</install_recommended>
 
     <kernel>kernel-default</kernel>
@@ -112,23 +111,21 @@
       <pattern>sw_management</pattern>
       <pattern>yast2_basis</pattern>
     </patterns>
-
+    <products config:type="list">
+      <product>openSUSE</product>
+    </products>
     <packages config:type="list">
       <package>ca-certificates-mozilla</package>
       <package>curl</package>
       <package>dhcp</package>
       <package>dhcp-client</package>
-      <package>gcc</package>
-      <package>git</package>
       <package>grub2</package>
-      <package>kernel-devel</package>
       <package>less</package>
       <package>make</package>
       <package>python-xml</package>
       <package>sudo</package>
       <package>vim</package>
       <package>wget</package>
-      <package>yast2-services-manager</package>
     </packages>
   </software>
 
