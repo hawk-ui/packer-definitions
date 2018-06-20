@@ -1,11 +1,11 @@
 {
   "variables": {
-    "version": "1.0.0",
+    "version": "1.0.2",
     "os": "15.0",
     "arch": "x86_64",
 
-    "iso_url": "http://download.opensuse.org/distribution/leap/15.0/iso/openSUSE-Leap-15.0-NET-x86_64-Current.iso",
-    "iso_checksum": "4bce12c537f23792c37dafb22c08365682533ba19e8c3b9290b43b3b88c3e17c",
+    "iso_url": "http://download.opensuse.org/distribution/leap/15.0/iso/openSUSE-Leap-15.0-NET-x86_64.iso",
+    "iso_checksum": "1a322de7c215da96fdbad4c247d218eb79073c5620a332a759c0291b44746fbc",
     "iso_checksum_type": "sha256",
 
     "qemu_accelerator": "kvm",
@@ -164,10 +164,10 @@
     },
     {
       "type": "salt-masterless",
-      "local_state_tree": "salt/leap_15.0",
+      "local_state_tree": "provisioning_scripts/leap_15.0/salt",
       "skip_bootstrap": true,
       "no_exit_on_failure": true,
-      "minion_config": "salt/leap_15.0/image-build/etc/minion"
+      "minion_config": "provisioning_scripts/leap_15.0/salt/image-build/etc/minion"
     }
   ]
 }
