@@ -7,17 +7,17 @@ network:ha-clustering:Factory:
     - refresh: True
     - gpgautoimport: True
 
-network:ha-clustering:BuildDep:
-  pkgrepo.managed:
-    - humanname: network:ha-clustering:BuildDep
-    - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/BuildDep/{{distro_repo}}/
-    - refresh: True
-    - gpgautoimport: True
+# network:ha-clustering:BuildDep:
+#   pkgrepo.managed:
+#     - humanname: network:ha-clustering:BuildDep
+#     - baseurl: http://download.opensuse.org/repositories/network:/ha-clustering:/BuildDep/{{distro_repo}}/
+#     - refresh: True
+#     - gpgautoimport: True
 
 devel:languages:ruby:extensions:
   pkgrepo.managed:
     - humanname: devel:languages:ruby:extensions
-    - baseurl: http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/{{distro_repo}}/
+    - baseurl: http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_15.0/
     - refresh: True
     - gpgautoimport: True
 
@@ -79,5 +79,5 @@ common_packages:
         - gcc
     - require:
         - pkgrepo: network:ha-clustering:Factory
-        - pkgrepo: network:ha-clustering:BuildDep
+        # - pkgrepo: network:ha-clustering:BuildDep
         - pkgrepo: update-oss
