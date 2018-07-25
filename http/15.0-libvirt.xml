@@ -119,7 +119,6 @@
       <package>curl</package>
       <package>dhcp</package>
       <package>dhcp-client</package>
-      <package>git</package>
       <package>grub2</package>
       <package>less</package>
       <package>make</package>
