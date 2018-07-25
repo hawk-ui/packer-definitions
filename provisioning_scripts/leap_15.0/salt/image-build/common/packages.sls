@@ -14,27 +14,27 @@ network:ha-clustering:Factory:
 #     - refresh: True
 #     - gpgautoimport: True
 
-devel:languages:ruby:extensions:
-  pkgrepo.managed:
-    - humanname: devel:languages:ruby:extensions
-    - baseurl: http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_15.0/
-    - refresh: True
-    - gpgautoimport: True
+# devel:languages:ruby:extensions:
+#   pkgrepo.managed:
+#     - humanname: devel:languages:ruby:extensions
+#     - baseurl: http://download.opensuse.org/repositories/devel:/languages:/ruby:/extensions/openSUSE_15.0/
+#     - refresh: True
+#     - gpgautoimport: True
 
-devel:languages:ruby:
-  pkgrepo.managed:
-    - humanname: devel:languages:ruby
-    - baseurl: https://download.opensuse.org/repositories/devel:/languages:/ruby/{{distro_repo}}/
-    - refresh: True
-    - gpgautoimport: True
+# devel:languages:ruby:
+#   pkgrepo.managed:
+#     - humanname: devel:languages:ruby
+#     - baseurl: https://download.opensuse.org/repositories/devel:/languages:/ruby/{{distro_repo}}/
+#     - refresh: True
+#     - gpgautoimport: True
 
 
-update-oss:
-  pkgrepo.managed:
-    - humanname: update-oss
-    - baseurl: http://download.opensuse.org/update/leap/15.0/oss/
-    - refresh: True
-    - gpgautoimport: True
+# update-oss:
+#   pkgrepo.managed:
+#     - humanname: update-oss
+#     - baseurl: http://download.opensuse.org/update/leap/15.0/oss/
+#     - refresh: True
+#     - gpgautoimport: True
 
 common_packages:
   pkg.installed:
@@ -60,7 +60,7 @@ common_packages:
         - ruby-devel
         - zlib-devel
         - libxslt-devel
-        - nodejs6
+        - nodejs8
         - ruby2.5-rubygem-rails-5_1
         - ruby2.5-rubygem-puma
         - ruby2.5-rubygem-sass-rails
@@ -80,4 +80,4 @@ common_packages:
     - require:
         - pkgrepo: network:ha-clustering:Factory
         # - pkgrepo: network:ha-clustering:BuildDep
-        - pkgrepo: update-oss
+        # - pkgrepo: update-oss
