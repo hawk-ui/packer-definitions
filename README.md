@@ -118,3 +118,11 @@ packer build -parallel=false definitions/13.1-i586.json
   [x86_64](https://atlas.hashicorp.com/opensuse/boxes/openSUSE-13.1-x86_64)
   [i586](https://atlas.hashicorp.com/opensuse/boxes/openSUSE-13.1-i586)
   
+  
+  
+ **TODO**
+ * Fix: The 'environment' minion config option has been renamed to 'saltenv'. Using image-build as the 'saltenv' config value:    In saltenv 'image-build', looking at rel_path 'top.sls' to resolve 'salt://top.sls'
+[DEBUG   ] In saltenv 'image-build', ** considering ** path '/var/cache/salt/minion/files/image-build/top.sls' to resolve 'salt://top.sls'
+[DEBUG   ] compile template: /var/cache/salt/minion/files/image-build/top.sls
+ * Install virt-what
+ * Fix Insecure logging configuration detected! Sensitive data may be logged.                                                                                                               
