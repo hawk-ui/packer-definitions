@@ -169,6 +169,10 @@
       "skip_bootstrap": true,
       "no_exit_on_failure": true,
       "minion_config": "provisioning_scripts/tumbleweed/salt/etc/minion"
-        }
+    },
+    {
+      "type": "shell",
+      "inline": ["rm /etc/salt/minion > /dev/null 2>&1 ; rm -r /srv/salt/* > /dev/null 2>&1"]
+    }
   ]
 }
