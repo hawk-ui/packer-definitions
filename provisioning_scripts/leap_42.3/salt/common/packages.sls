@@ -70,6 +70,7 @@ common_packages:
         - ruby2.1-rubygem-tilt-1_4
         - make
         - gcc
+        - virt-what
     - require:
         - pkgrepo: network:ha-clustering:BuildDep
         - pkgrepo: devel:languages:ruby:extensions

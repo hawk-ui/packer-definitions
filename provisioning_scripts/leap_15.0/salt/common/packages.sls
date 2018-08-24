@@ -77,6 +77,7 @@ common_packages:
         - ruby2.5-rubygem-gettext
         - make
         - gcc
+        - virt-what
     - require:
         - pkgrepo: network:ha-clustering:Factory
         # - pkgrepo: network:ha-clustering:BuildDep
