@@ -167,7 +167,7 @@
       "local_state_tree": "provisioning_scripts/leap_42.3/salt",
       "skip_bootstrap": true,
       "no_exit_on_failure": true,
-      "minion_config": "provisioning_scripts/leap_42.3/salt/image-build/etc/minion"
+      "minion_config": "provisioning_scripts/leap_42.3/salt/etc/minion"
     }
   ]
 }

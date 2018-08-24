@@ -1,4 +1,4 @@
-image-build:
+base:
   '*':
     - common
 

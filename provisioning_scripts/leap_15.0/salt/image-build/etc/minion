@@ -1,9 +1,0 @@
-saltenv: image-build
-minion_id_caching: False
-
-file_roots:
-  image-build:
-    - /srv/salt/image-build
-pillar_roots:
-  image-build:
-    - /srv/pillar/image-build
