@@ -126,6 +126,7 @@
       <package>sudo</package>
       <package>vim</package>
       <package>wget</package>
+      <package>yast2-services-manager</package>
     </packages>
   </software>
 
