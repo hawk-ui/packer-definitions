@@ -1,17 +1,17 @@
 {
   "variables": {
-    "version": "1.1.20",
+    "version": "1.1.21",
     "os": "Tumbleweed",
     "arch": "x86_64",
 
-    "iso_url": "http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20180815-Media.iso",
-    "iso_checksum": "0cb77ce165ed8017db6fd42fe56e645f88799092b9cdd7954eb918547d9ad84f",
+    "iso_url": "http://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20180820-Media.iso",
+    "iso_checksum": "cf55da1e1a0a48d6132eea1381f9870a11fa6fe28b318ebd2afda474c2543df3",
     "iso_checksum_type": "sha256",
 
     "qemu_accelerator": "kvm",
 
-    "memory": "1024",
-    "cpus": "1",
+    "memory": "2048",
+    "cpus": "2",
 
     "fusion_path": "/Applications/VMware Fusion.app"
   },
@@ -171,8 +171,9 @@
       "minion_config": "provisioning_scripts/tumbleweed/salt/etc/minion"
     },
     {
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "type": "shell",
-      "inline": ["rm /etc/salt/minion > /dev/null 2>&1 ; rm -r /srv/salt/* > /dev/null 2>&1"]
+      "script": "scripts/base/cleanup_salt.sh"
     }
   ]
 }
