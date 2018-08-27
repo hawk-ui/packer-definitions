@@ -59,7 +59,7 @@ common_packages:
         - ruby-devel
         - zlib-devel
         - libxslt-devel
-        - nodejs6
+        - nodejs8
         - ruby2.5-rubygem-rails-5_1
         - ruby2.5-rubygem-puma
         - ruby2.5-rubygem-sass-rails
