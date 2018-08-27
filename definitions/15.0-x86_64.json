@@ -1,6 +1,6 @@
 {
   "variables": {
-    "version": "1.0.7",
+    "version": "1.0.8",
     "os": "15.0",
     "arch": "x86_64",
 
@@ -10,8 +10,8 @@
 
     "qemu_accelerator": "kvm",
 
-    "memory": "1024",
-    "cpus": "1",
+    "memory": "2048",
+    "cpus": "2",
 
     "fusion_path": "/Applications/VMware Fusion.app"
   },
@@ -170,8 +170,9 @@
       "minion_config": "provisioning_scripts/leap_15.0/salt/etc/minion"
     },
     {
+      "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
       "type": "shell",
-      "inline": ["rm /etc/salt/minion > /dev/null 2>&1 ; rm -r /srv/salt/* > /dev/null 2>&1"]
+      "script": "scripts/base/cleanup_salt.sh"
     }
   ]
 }
